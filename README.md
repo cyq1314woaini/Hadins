@@ -28,22 +28,26 @@ conda install numpy, pandas, Matplotlib, TensorFlow 2.7, pysam
 ### 1.Generate Features
 ```　 
 python Hadins.py generate_feature lbamfile sbamfile output process includecontig
+
 lbamfile is the path of the alignment file about the reference and the long read set
 sbamfile is the path of the alignment file about the reference and the short read set
 output is a folder which is used to store features
 process is the number of processes to use
 includecontig is the list of contig to preform detection.(default: [], all contig are used)
+
 eg:python Hadins.py generate_feature long_read.bam short_read.bam outpath 5 [12,13,14,15,16,17,18,19,20,21,22]
 ``` 
 ### 2.Call Insertion 
 ```　 
 python Hadins.py weight datapath lbamfile outvcfpath support includecontig
+
 weight is the path of the model weight
 datapath is a folder which is used to store features
 lbamfile is the path os the alignment file about the reference and the long read set
 outvcfpath is the path of vcf file
 support is min support reads
 includecontig is the list of contig to preform detection.(default: [], all contig are used)
+
 eg:python Hadins.py call_ins ins.h5 datapath long_read.bam outvcfpath 10 [12,13,14,15,16,17,18,19,20,21,22]
 ```  
 ## Tested data 
