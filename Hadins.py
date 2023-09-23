@@ -42,7 +42,6 @@ if model == "generate_feature":
     # 开始执行提取特征
     if lens not in [5, 6, 7]:
         flag = 1
-        print("噢噢噢噢哦哦哦")
     else:
         print("start generate feature")
         bamfilepath_long = ''
